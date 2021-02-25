@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reading user inputs</title>
+</head>
+
+<body>
+    <h1>Hidden things by Jaya Kumar Saga </h1>
+    <h2>Getting input</h2>
+
+    <form>
+        <label for="form1_age">What is your age </label>
+        <input type="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+
+        <label for="form1_nick">What is your nickname </label>
+        <input type="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+        <input type="button" onclick="resolveForm()" value="Get values from form">
+    </form>
+
+
+    <p id="result">This text will be replaced </p>
+
+    <hr>
+    <form>
+        <label for="form1_passwordL">Enter the secret word </label>
+        <input type="password" id="form1_password" name="form1_password" value="Secret" min=10 max=50 step=2 value=30> <br>
+
+        <label for="form1_guessL">Enter a guess </label>
+        <input type="text" id="form1_guess" name="form1_guess" autofocus> <br>
+        <input type="button" onclick="processGuess()" value="Check the guess">
+    </form>
+
+    <p id="guess">Result counts will be displayed here</p>
+
+    <script>
+        var correct = 0;
+        var wrong = 0;
+
+        function processGuess() {
+            var s = document.getElementById("form1_password").value;
+            var g = document.getElementById("form1_guess").value;
+            out = document.getElementById("guess");
+            if (s == g) {
+                alert("Congratulation");
+                correct = correct + 1;
+                out.innerHTML = "correct" + correct + ",Wrong" + wrong;
+            } else {
+                alert("Sorry");
+                wrong = wrong + 1;
+                out.innerHTML = "correct " + correct + ",Wrong " + wrong;
+
+            }
+        }
+
+        function resolveForm() {
+            console.log("Getting form values")
+            age = document.getElementById("form1_age").value
+            nick = document.getElementById("form1_nick").value
+            confirmed = confirm("Are these the values? " + age + " and " + nick)
+
+            out = document.getElementById("result")
+            if (confirmed) {
+                out.innerHTML = "Values were confirmed"
+            } else {
+                out.innerHTML = "Values were not confirmed"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
