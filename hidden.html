@@ -34,9 +34,34 @@
 
     <p id="guess">Result counts will be displayed here</p>
 
+    <hr>
+    <div class="container">
+        <img src="images/Alipinia.jpg" onClick="rotateImage()" id="image" alt="Alipinia" width="200" height="200">
+
+    </div>
     <script>
         var correct = 0;
         var wrong = 0;
+        var currentImage = 0;
+        image = document.getElementById("image");
+
+        function rotateImage() {
+
+            switch (currentImage) {
+                case 0:
+                    image.setAttribute('src', 'images/sasa.jpg');
+                    currentImage = currentImage + 1;
+                    break;
+                case 1:
+                    image.setAttribute('src', 'images/Jasmine.jpg');
+                    currentImage = currentImage + 1;
+                    break;
+                case 2:
+                    image.setAttribute('src', 'images/Alipinia.jpg');
+                    currentImage = currentImage + 1;
+                    break;
+            }
+        }
 
         function processGuess() {
             var s = document.getElementById("form1_password").value;
