@@ -41,7 +41,7 @@
         out = document.getElementById("result")
 
         function startbear() {
-            alert("sam");
+
             if (document.getElementById("cb1_hat").checked) {
                 my_bear.hat = 'true';
             } else {
@@ -67,7 +67,7 @@
             var p = document.getElementById("form1_prop").value;
             var v = document.getElementById("form1_propValue").value;
             my_bear[p] = v;
-            res.innerHTML = JSON.stringify(my_bear);
+            res.innerHTML = "my_bear[]=  " + JSON.stringify(my_bear);
         }
     </script>
 
