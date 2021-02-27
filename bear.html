@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bears</title>
+</head>
+
+<body>
+    <h1>Jaya Kumar Saga builds a bear</h1>
+    <h2>Getting input</h2>
+    <form>
+        <input type="checkbox" id="cb1_hat" name="hat" value="hat">
+        <label for="cb1_hat">hat</label></br>
+
+        <input type="checkbox" id="cb1_scarf" name="scarf" value="scarf">
+        <label for="cb1_scarf">scarf</label></br>
+
+        <input type="checkbox" id="cb1_shirt" name="shirt" value="shirt">
+        <label for="cb1_shirt">shirt</label></br>
+
+        <input type="button" onclick="startbear()" value="Start a bear">
+    </form>
+    <p id="result">This text will be replaced </p>
+
+    <script>
+        var my_bear = {
+            hat: 'false',
+            scarf: 'false',
+            shirt: 'false'
+        }
+        out = document.getElementById("result")
+
+        function startbear() {
+            alert("sam");
+            if (document.getElementById("cb1_hat").checked) {
+                my_bear.hat = 'true';
+            } else {
+                my_bear.hat = 'false';
+            }
+            result.innerHTML = "hat: " + my_bear.hat;
+            if (document.getElementById("cb1_scarf").checked) {
+                my_bear.scarf = 'true';
+            } else {
+                my_bear.scarf = 'false';
+            }
+            result.innerHTML = result.innerHTML + "\n" + "scarf: " + my_bear.scarf;
+            if (document.getElementById("cb1_shirt").checked) {
+                my_bear.shirt = 'true';
+            } else {
+                my_bear.shirt = 'false';
+            }
+            result.innerHTML = result.innerHTML + "\n" + "shirt: " + my_bear.shirt;
+        }
+    </script>
+
+</body>
+
+</html>
