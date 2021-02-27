@@ -21,12 +21,22 @@
         <input type="button" onclick="startbear()" value="Start a bear">
     </form>
     <p id="result">This text will be replaced </p>
+    <form>
+        <label for="form1_prop">Enter a property </label>
+        <input type="text" id="form1_prop" name="form1_prop" value=color> <br>
 
+        <label for="form1_propValue">Enter a value </label>
+        <input type="text" id="form1_propValue" name="form1_propValue"> <br>
+
+        <input type="button" onclick="updatebear()" value="Update the bear">
+    </form>
+    <p id="res">This text will be replaced </p>
     <script>
         var my_bear = {
             hat: 'false',
             scarf: 'false',
-            shirt: 'false'
+            shirt: 'false',
+            "new": 'text'
         }
         out = document.getElementById("result")
 
@@ -50,6 +60,14 @@
                 my_bear.shirt = 'false';
             }
             result.innerHTML = result.innerHTML + "\n" + "shirt: " + my_bear.shirt;
+        }
+        out = document.getElementById("result")
+
+        function updatebear() {
+            var p = document.getElementById("form1_prop").value;
+            var v = document.getElementById("form1_propValue").value;
+            my_bear[p] = v;
+            res.innerHTML = JSON.stringify(my_bear);
         }
     </script>
 
