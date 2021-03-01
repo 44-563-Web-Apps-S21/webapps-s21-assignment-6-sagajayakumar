@@ -3,6 +3,15 @@
 
 <head>
     <title>Bears</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +50,6 @@
         out = document.getElementById("result")
 
         function startbear() {
-
             if (document.getElementById("cb1_hat").checked) {
                 my_bear.hat = 'true';
             } else {
