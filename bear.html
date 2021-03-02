@@ -11,6 +11,18 @@
             display: inline-block;
             width: 200px;
         }
+        
+        p {
+            background-color: green;
+            color: white;
+            display: inline;
+        }
+        
+        p:hover {
+            background-color: aquamarine;
+            color: black;
+            display: inline;
+        }
     </style>
 </head>
 
@@ -30,6 +42,7 @@
         <input type="button" onclick="startbear()" value="Start a bear">
     </form>
     <p id="result">This text will be replaced </p>
+    <hr>
     <form>
         <label for="form1_prop">Enter a property </label>
         <input type="text" id="form1_prop" name="form1_prop" value=color> <br>
@@ -40,6 +53,7 @@
         <input type="button" onclick="updatebear()" value="Update the bear">
     </form>
     <p id="res">This text will be replaced </p>
+    <hr>
     <script>
         var my_bear = {
             hat: 'false',

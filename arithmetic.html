@@ -11,6 +11,18 @@
             display: inline-block;
             width: 200px;
         }
+        
+        p {
+            background-color: green;
+            color: white;
+            display: inline;
+        }
+        
+        p:hover {
+            background-color: aquamarine;
+            color: black;
+            display: inline;
+        }
     </style>
 </head>
 
@@ -43,6 +55,7 @@
         <label for="rg1_divide">Divide</label></br>
     </form>
     <p id="res">This text will be replaced by result </p>
+    <hr>
     <script>
         function processRadio() {
             var n1 = document.getElementById("form1_number").value;
