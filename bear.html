@@ -23,6 +23,13 @@
             color: black;
             display: inline;
         }
+        
+        h1 {
+            background-color: cornflowerblue;
+            color: white;
+            display: inline-block;
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
 </head>
 
@@ -55,15 +62,11 @@
     <p id="res">This text will be replaced </p>
     <hr>
     <script>
-        var my_bear = {
-            hat: 'false',
-            scarf: 'false',
-            shirt: 'false',
-            "new": 'text'
-        }
+        var my_bear = {}
         out = document.getElementById("result")
 
         function startbear() {
+            var my_bear = {}
             if (document.getElementById("cb1_hat").checked) {
                 my_bear.hat = 'true';
             } else {
